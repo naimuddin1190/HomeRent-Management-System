@@ -1,0 +1,104 @@
+/* ============================
+   Shared variables & reset
+   ============================ */
+:root{
+  --bg:#f4f6fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --primary1:#0ea5a4;  /* teal */
+  --primary2:#06b6d4;
+  --accent:#7c3aed;     /* purple */
+  --danger:#ef4444;
+  --glass: rgba(255,255,255,0.7);
+  --radius:12px;
+  --shadow: 0 8px 24px rgba(16,24,40,0.06);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: 'Noto Sans Bengali', 'Poppins', sans-serif;
+  background: linear-gradient(180deg,#eef2ff,#f8fafc);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Navbar */
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;padding:14px 26px;background:linear-gradient(90deg,var(--primary2),var(--accent));
+  color:white; position:sticky; top:0; z-index:50;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.08);
+}
+.brand{font-weight:700;display:flex;gap:10px;align-items:center}
+.navlinks a{color:white;text-decoration:none;margin-left:18px;font-weight:600}
+
+/* Layout */
+.dashboard{display:grid;grid-template-columns:1fr 380px;gap:18px;max-width:1200px;margin:24px auto;padding:0 18px}
+.left-col{min-height:300px}
+.right-col{min-height:300px}
+
+/* Panels */
+.panel{background:var(--card);border-radius:14px;padding:18px;box-shadow:var(--shadow);border:1px solid rgba(14,165,164,0.06)}
+.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.panel-head h2{margin:0;color:var(--accent)}
+
+.panel-actions{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Buttons */
+.btn{padding:9px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:linear-gradient(90deg,var(--primary1),var(--primary2));color:white}
+.btn.accent{background:linear-gradient(90deg,var(--accent),#5b21b6);color:white}
+.btn.outline{background:transparent;border:1px solid #e6e9f2;color:var(--accent)}
+.btn.danger{background:var(--danger);color:white}
+
+/* Room cards */
+.room-container{display:flex;flex-direction:column;gap:12px}
+.room-card{border-radius:12px;padding:12px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(99,102,241,0.06);box-shadow:0 6px 18px rgba(99,102,241,0.03)}
+.room-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.room-title{font-weight:700}
+.room-fields{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
+.room-fields label{display:flex;flex-direction:column;font-size:14px;color:var(--muted)}
+.room-fields input, .room-fields select{padding:8px;border-radius:8px;border:1px solid #e6eef8;background:transparent}
+
+/* actions/result */
+.card-actions{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.result-block{margin-top:10px;padding:10px;border-radius:10px;background:#f8fafc;border:1px solid rgba(6,182,212,0.06)}
+
+/* Summary (right) */
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.summary-card{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(6,182,212,0.06)}
+.summary-card .title{font-size:13px;color:var(--muted)}
+.summary-card .value{font-weight:800;font-size:20px;margin-top:6px}
+
+/* chart */
+.chart-section{margin-top:12px}
+.progress-bar-wrap{margin-top:12px}
+.progress-track{height:14px;background:#e6eef8;border-radius:999px;overflow:hidden;margin-top:6px}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--primary1),var(--accent));transition:width 600ms ease}
+.progress-percent{text-align:right;margin-top:6px;font-weight:700}
+
+/* tenant page */
+.tenant-main{max-width:1200px;margin:24px auto;padding:0 18px;display:grid;grid-template-columns:480px 1fr;gap:18px}
+.form-panel .form-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.form-grid label{display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+.form-grid input, .form-grid select{padding:10px;border-radius:8px;border:1px solid #e6eef8}
+.photo-preview{margin-top:6px}
+.photo-preview img{max-width:120px;border-radius:10px;border:1px solid #e6eef8}
+
+/* tenant list */
+.tenant-list{display:grid;gap:10px}
+.tenant-card{display:flex;gap:12px;align-items:center;padding:10px;background:linear-gradient(180deg,#fff,#fbfdff);border-radius:10px;border:1px solid rgba(99,102,241,0.04)}
+.tenant-card img{width:80px;height:80px;object-fit:cover;border-radius:8px}
+.tenant-meta{flex:1}
+
+/* footer */
+.site-footer{max-width:1200px;margin:18px auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.site-footer .socials a{margin-left:8px;color:var(--muted)}
+
+/* responsive */
+@media (max-width:980px){
+  .dashboard{grid-template-columns:1fr; padding:12px}
+  .tenant-main{grid-template-columns:1fr; padding:12px}
+  .right-col{order:2}
+  .left-col{order:1}
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electric Rent Manager</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-bolt"></i> Electric Rent Manager</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#rooms">Add Room</a></li>
+      <li><a href="#progress">Progress</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Room Section -->
+  <section id="rooms" class="container">
+    <h2>Room Management</h2>
+    <div id="roomContainer"></div>
+    <button id="addRoomBtn" class="add-btn"><i class="fa-solid fa-plus"></i> Add Room</button>
+  </section>
+
+  <!-- Progress Section -->
+  <section id="progress" class="container">
+    <h2>Monthly Progress</h2>
+    <canvas id="progressChart" height="100"></canvas>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Electric Rent Manager | Developed by Naim</p>
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:uddinmdnaim10@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

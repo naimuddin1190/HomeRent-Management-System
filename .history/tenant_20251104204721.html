@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভাড়াটিয়ার তথ্য</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>👨‍💼 ভাড়াটিয়ার তথ্য সংরক্ষণ</h1>
+    <nav>
+      <a href="index.html">হিসাব</a>
+      <a href="tenant.html">ভাড়াটিয়ার তথ্য</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="tenantForm">
+      <label>নাম: <input type="text" id="name" required></label>
+      <label>বয়স: <input type="number" id="age" required></label>
+      <label>পেশা: <input type="text" id="profession" required></label>
+      <label>বর্তমান ঠিকানা: <input type="text" id="present" required></label>
+      <label>স্থায়ী ঠিকানা: <input type="text" id="permanent" required></label>
+      <label>মোবাইল নম্বর: <input type="text" id="mobile" required></label>
+      <label>NID নম্বর: <input type="text" id="nid" required></label>
+      <label>ছবি আপলোড করুন: <input type="file" id="photo" accept="image/*"></label>
+      <button type="submit">💾 সংরক্ষণ করুন</button>
+      <button type="button" id="clearTenant">🧹 সব তথ্য মুছুন</button>
+    </form>
+
+    <div id="tenantList"></div>
+  </main>
+
+  <footer>
+    <p>© ২০২৫ বাংলা হোম রেন্ট ম্যানেজার</p>
+  </footer>
+
+  <script src="tenant.js"></script>
+</body>
+</html>

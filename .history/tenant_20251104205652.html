@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ভাড়াটিয়ার তথ্য — বাংলা ভাড়া-ম্যানেজার</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand"><i class="fa-solid fa-user"></i> ভাড়াটিয়াদের প্রোফাইল</div>
+    <nav class="navlinks">
+      <a href="index.html">হোম</a>
+      <a href="tenant.html">ভাড়াটিয়া</a>
+    </nav>
+  </header>
+
+  <main class="tenant-main">
+    <section class="panel form-panel">
+      <h2>ভাড়াটিয়ার তথ্য ফর্ম</h2>
+      <form id="tenantForm">
+        <div class="form-grid">
+          <label>রুম নির্বাচন
+            <select id="tenantRoom" required>
+              <!-- রুম অপশনগুলো এখানে লোড হবে -->
+            </select>
+          </label>
+
+          <label>পূর্ণ নাম
+            <input type="text" id="t_name" placeholder="নাম লিখুন" required>
+          </label>
+
+          <label>বয়স
+            <input type="number" id="t_age" placeholder="বয়স" required>
+          </label>
+
+          <label>পেশা
+            <input type="text" id="t_profession" placeholder="পেশা">
+          </label>
+
+          <label>মোবাইল নম্বর
+            <input type="text" id="t_mobile" placeholder="01XXXXXXXXX" required>
+          </label>
+
+          <label>NID নম্বর
+            <input type="text" id="t_nid" placeholder="NID">
+          </label>
+
+          <label>বর্তমান ঠিকানা
+            <input type="text" id="t_present" placeholder="বর্তমান ঠিকানা">
+          </label>
+
+          <label>স্থায়ী ঠিকানা
+            <input type="text" id="t_permanent" placeholder="স্থায়ী ঠিকানা">
+          </label>
+
+          <label>ছবি আপলোড
+            <input type="file" id="t_photo" accept="image/*">
+          </label>
+
+          <div class="photo-preview" id="photoPreview"></div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary"><i class="fa-solid fa-save"></i> সেভ করুন</button>
+          <button type="button" id="clearTenants" class="btn danger"><i class="fa-solid fa-trash"></i> সব ভাড়াটিয়া মুছুন</button>
+          <button type="button" id="printTenants" class="btn outline"><i class="fa-solid fa-print"></i> প্রিন্ট তালিকা</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel list-panel">
+      <h2>ভাড়াটিয়াদের তালিকা</h2>
+      <div id="tenantList" class="tenant-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© ২০২৫ বাংলা ভাড়া-ম্যানেজার</div>
+  </footer>
+
+  <script src="tenant.js"></script>
+</body>
+</html>
